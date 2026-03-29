@@ -16,4 +16,4 @@ plot(t, y_filtered);
 title('Filtered Audio Signal (Lowpass 3 kHz)');
 xlabel('Time (s)');
 ylabel('Amplitude');
-sound(y_filtered,Fs);
+%sound(y_filtered,Fs);
