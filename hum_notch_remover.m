@@ -1,8 +1,8 @@
 % Scenario: Removing electrical interference from a signal
 Fs = 1000;              % Sample rate
 t = 0:1/Fs:2;           % 2 seconds of data
-clean_sig = sin(2*pi*5*t); % Our "heartbeat" or slow signal
-hum = 0.5 * sin(2*pi*60*t); % The annoying 60Hz power line hum
+clean_sig = sin(2*pi*5*t); % Our heartbeat or slow signal
+hum = 0.5 * sin(2*pi*60*t); % 60Hz power line hum
 x = clean_sig + hum;    % Combined signal
 
 % Design a notch filter to remove exactly 60Hz

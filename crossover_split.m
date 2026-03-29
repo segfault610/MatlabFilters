@@ -1,3 +1,5 @@
+load('handel.mat');
+audiowrite('handel.wav', y, Fs);
 [x, Fs] = audioread('handel.wav');
 low = lowpass(x, 500, Fs);
 high = highpass(x, 500, Fs);
