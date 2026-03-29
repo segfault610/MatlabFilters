@@ -3,7 +3,7 @@ load('handel.mat');
 audiowrite('handel.wav', y, Fs);
 [x, Fs] = audioread('handel.wav');
 % Design a 4th order Butterworth Lowpass (Bass) and Highpass (Treble)
-cutoff = 800; % Frequency in Hz
+cutoff = 1000; % Frequency in Hz
 [b_low, a_low] = butter(4, cutoff/(Fs/2), 'low');
 [b_high, a_high] = butter(4, cutoff/(Fs/2), 'high');
 bass = filter(b_low, a_low, x);

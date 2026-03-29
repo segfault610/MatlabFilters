@@ -8,6 +8,6 @@ windowSize = 10;
 b = (1/windowSize)*ones(1, windowSize);
 a = 1;
 y = filter(b, a, x);
-plot(t, x, '.', t, y, 'r-', 'LineWidth', 2);
+plot(t, x, 'b-', t, y, 'r-', 'LineWidth', 2);
 legend('Raw Jittery Sensor', 'Smoothed Data');
 title('Sensor Data Smoothing');

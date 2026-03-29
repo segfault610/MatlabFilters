@@ -1,10 +1,10 @@
 load('handel.mat');
 audiowrite('handel.wav', y, Fs);
 [x, Fs] = audioread('handel.wav');
-%sound(x, Fs);
-%pause(10);
+sound(x, Fs);
+pause(10);
 y_filtered = lowpass(x, 3000, Fs);
-t = (0:length(x)-1)/Fs;   % Time axis
+t = (0:length(x)-1)/Fs;
 figure;
 subplot(2,1,1);
 plot(t, x);
@@ -16,4 +16,4 @@ plot(t, y_filtered);
 title('Filtered Audio Signal (Lowpass 3 kHz)');
 xlabel('Time (s)');
 ylabel('Amplitude');
-%sound(y_filtered,Fs);
+sound(y_filtered,Fs);
